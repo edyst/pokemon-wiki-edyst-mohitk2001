@@ -7,7 +7,6 @@ body {
   font-size: 16px;
   font-family: Avenir-Next, Roboto, sans-serif;
   color: #7f8c8d;
- 
 }
 /* CSS of header part */
 .pokemon_header {
@@ -232,7 +231,7 @@ body {
   background-color: #4992ca;
   color: white;
   text-align: center;
-  font-family: Avenir-Next, Roboto, sans-serif; 
+  font-family: Avenir-Next, Roboto, sans-serif;
 }
 
 .pockemon_monsters_contents {
@@ -272,74 +271,148 @@ body {
   margin-top: 20px;
 }
 @media screen and (max-width: 787px) {
-    .pockemon_monsters_section{
-        height: 150vh;
-    }
+  .pockemon_monsters_section {
+    height: 150vh;
+  }
   .pokemon_monster_iconss {
     flex-wrap: wrap;
     margin-bottom: 15px;
   }
-  .pokemon_monster_water,.pokemon_monster_fire,.pokemon_monster_grass{
-    width:unset;
+  .pokemon_monster_water,
+  .pokemon_monster_fire,
+  .pokemon_monster_grass {
+    width: unset;
   }
 }
-@media screen and (max-width:646px){
-    .pockemon_monsters_contents_header {
-        font-size: 25px;
-        margin-bottom: 5px;
-      }
-      .pockemon_monsters_contents > p {
-        margin-bottom: 5px;
-        line-height: 20px;
-      }
-      .pokemon_monster_iconss > div > h4 {
-        font-size: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-      .pockemon_monsters_section{
-        height: 150vh;
-    }
+@media screen and (max-width: 646px) {
+  .pockemon_monsters_contents_header {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .pockemon_monsters_contents > p {
+    margin-bottom: 5px;
+    line-height: 20px;
+  }
+  .pokemon_monster_iconss > div > h4 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .pockemon_monsters_section {
+    height: 150vh;
+  }
 }
-@media screen and (max-width:446px){
-    .pockemon_monsters_section{
-        height: 160vh;
-    }
+@media screen and (max-width: 446px) {
+  .pockemon_monsters_section {
+    height: 160vh;
+  }
 }
-@media screen and (max-width:394px){
-    .pockemon_monsters_section{
-        height: 180vh;
-    }
+@media screen and (max-width: 394px) {
+  .pockemon_monsters_section {
+    height: 180vh;
+  }
 }
-@media screen and (max-width:374px){
-    .pockemon_monsters_section{
-        height: 200vh;
-    }
+@media screen and (max-width: 374px) {
+  .pockemon_monsters_section {
+    height: 200vh;
+  }
 }
-@media screen and (max-width:330px){
-    .pockemon_monsters_section{
-        height: 220vh;
-    }
+@media screen and (max-width: 330px) {
+  .pockemon_monsters_section {
+    height: 220vh;
+  }
 }
-@media screen and (max-width:300px){
-    .pockemon_monsters_section{
-        height: 240vh;
-    }
+@media screen and (max-width: 300px) {
+  .pockemon_monsters_section {
+    height: 240vh;
+  }
 }
 /* Pocket Monsters Section Ends here */
 
-
 /* Statistics Section starts here */
 
-.pokemon_statistics{
+.pokemon_statistics {
+  width: 100%;
+  height: 90vh;
+  font-family: Avenir-Next,Roboto,sans-serif;
+  color: black;
+}
+.pokemon_statistics_content {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.pokemon_statistics_content>h2{
+    font-size: 45px;
+    padding-top: 15px;
+}
+.statistics_cards{
+    display: flex;
     width: 100%;
-  
+    justify-content: space-between;
+    text-align: center;
 }
-.pokemon_statistics_content{
-    width: 75%;
-    margin: auto;
+.card>h4{
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+}
+.card >p{
+    margin-top: 30px;
+}
+.card>img{
     
+    width: 70%;
+    margin: auto;
+    object-fit: contain;
+    margin-top: 20px;
 }
-
+@media screen and (max-width:1000px){
+    .pokemon_statistics_content{
+        width: 100%;
+    }
+}
+@media screen and (max-width:790px){
+    .pokemon_statistics{
+        height: 150vh;
+    }
+    .statistics_cards{
+        flex-direction: column;
+    }
+    .card>h4{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width:405px){
+    .pokemon_statistics_content>h2{
+        padding: unset;
+        font-size: 32px;
+    }
+}
+@media screen 
+  and (min-width: 669px) 
+  and (max-width: 800px){
+    .card>img{
+        height: 300px;
+    }
+}
 
 /* Statistics Section ends  here */
+
+/* Pokemon of the year section starts here */
+.pokemon_of_the_year{
+    width: 100%;
+    height: 120vh;
+    font-family: Avenir-Next,Roboto,sans-serif;
+
+}
+.pokemon_of_the_year_contents{
+    width: 75%;
+    margin: auto;
+}
+.pokemon_of_the_year_contents>h4{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+/* Pokemon of the year section ends here */
