@@ -1,12 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   font-family: Avenir-Next, Roboto, sans-serif;
   color: #7f8c8d;
+  position: absolute;
 }
 /* CSS of header part */
 .pokemon_header {
@@ -14,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid grey;
+ 
 }
 .pokemon_header_left {
   width: 20%;
@@ -84,7 +89,7 @@ body {
 /*  Welcome Pars Starts here  */
 .pokemon_main_section {
   width: 100%;
-  height: 90vh;
+
   background-image: url("https://i.imgur.com/ksqOx5F.jpg");
   background-position: center;
   background-size: cover;
@@ -106,6 +111,7 @@ body {
   justify-items: center;
   width: 80%;
   margin: auto;
+  margin-bottom: 60px;
 }
 .pokemon_main_section_content > h1 {
   font-size: 90px;
@@ -153,9 +159,6 @@ body {
   padding-right: 5px;
 }
 @media screen and (max-width: 768px) {
-  .pokemon_main_section {
-    height: 50vh;
-  }
   .pokemon_main_section_content {
     align-items: center;
   }
@@ -180,9 +183,7 @@ body {
   .pokemon_main_section_content {
     align-items: center;
   }
-  .pokemon_main_section {
-    height: 50vh;
-  }
+
   .pokemon_main_section_content > h1 {
     font-size: 30px;
     margin-top: 10px;
@@ -202,9 +203,6 @@ body {
   }
 }
 @media screen and (max-width: 520px) {
-  .pokemon_main_section {
-    height: 60vh;
-  }
   .pokemon_main_section_content > h1 {
     margin-top: 10px;
   }
@@ -227,7 +225,7 @@ body {
 /* Pocket Monsters Section Starts here */
 .pockemon_monsters_section {
   width: 100%;
-  height: 95vh;
+
   background-color: #4992ca;
   color: white;
   text-align: center;
@@ -271,9 +269,6 @@ body {
   margin-top: 20px;
 }
 @media screen and (max-width: 787px) {
-  .pockemon_monsters_section {
-    height: 150vh;
-  }
   .pokemon_monster_iconss {
     flex-wrap: wrap;
     margin-bottom: 15px;
@@ -298,43 +293,16 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .pockemon_monsters_section {
-    height: 150vh;
-  }
 }
-@media screen and (max-width: 446px) {
-  .pockemon_monsters_section {
-    height: 160vh;
-  }
-}
-@media screen and (max-width: 394px) {
-  .pockemon_monsters_section {
-    height: 180vh;
-  }
-}
-@media screen and (max-width: 374px) {
-  .pockemon_monsters_section {
-    height: 200vh;
-  }
-}
-@media screen and (max-width: 330px) {
-  .pockemon_monsters_section {
-    height: 220vh;
-  }
-}
-@media screen and (max-width: 300px) {
-  .pockemon_monsters_section {
-    height: 240vh;
-  }
-}
+
 /* Pocket Monsters Section Ends here */
 
 /* Statistics Section starts here */
 
 .pokemon_statistics {
   width: 100%;
-  height: 90vh;
-  font-family: Avenir-Next,Roboto,sans-serif;
+
+  font-family: Avenir-Next, Roboto, sans-serif;
   color: black;
 }
 .pokemon_statistics_content {
@@ -342,77 +310,807 @@ body {
   margin: auto;
   text-align: center;
 }
-.pokemon_statistics_content>h2{
-    font-size: 45px;
-    padding-top: 15px;
+.pokemon_statistics_content > h2 {
+  font-size: 45px;
+  padding-top: 15px;
 }
-.statistics_cards{
-    display: flex;
+.statistics_cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+}
+.card > h4 {
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+}
+.card > p {
+  margin-top: 30px;
+}
+.card > img {
+  width: 70%;
+  margin: auto;
+  object-fit: contain;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .pokemon_statistics_content {
     width: 100%;
-    justify-content: space-between;
-    text-align: center;
+  }
 }
-.card>h4{
-    font-size: 30px;
-    font-weight: 200;
-    text-align: center;
+@media screen and (max-width: 790px) {
+  .statistics_cards {
+    flex-direction: column;
+  }
+  .card > h4 {
+    margin-top: 10px;
+  }
 }
-.card >p{
-    margin-top: 30px;
+@media screen and (max-width: 405px) {
+  .pokemon_statistics_content > h2 {
+    padding: unset;
+    font-size: 32px;
+  }
 }
-.card>img{
-    
-    width: 70%;
-    margin: auto;
-    object-fit: contain;
-    margin-top: 20px;
-}
-@media screen and (max-width:1000px){
-    .pokemon_statistics_content{
-        width: 100%;
-    }
-}
-@media screen and (max-width:790px){
-    .pokemon_statistics{
-        height: 150vh;
-    }
-    .statistics_cards{
-        flex-direction: column;
-    }
-    .card>h4{
-        margin-top: 10px;
-    }
-}
-@media screen and (max-width:405px){
-    .pokemon_statistics_content>h2{
-        padding: unset;
-        font-size: 32px;
-    }
-}
-@media screen 
-  and (min-width: 669px) 
-  and (max-width: 800px){
-    .card>img{
-        height: 300px;
-    }
+@media screen and (min-width: 669px) and (max-width: 800px) {
+  .card > img {
+    height: 200px;
+  }
 }
 
 /* Statistics Section ends  here */
 
 /* Pokemon of the year section starts here */
-.pokemon_of_the_year{
-    width: 100%;
-    height: 120vh;
-    font-family: Avenir-Next,Roboto,sans-serif;
+.pokemon_of_the_year {
+  width: 100%;
 
+  font-family: Avenir-Next, Roboto, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pokemon_of_the_year_contents{
-    width: 75%;
+.pokemon_of_the_year_contents {
+  width: 75%;
+  margin: auto;
+}
+.pokemon_of_the_year_contents > h4 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.pokemon_characters {
+  width: 100%;
+  display: flex;
+}
+.pokemon_characters > .col1,
+.pokemon_characters > .col2 {
+  width: 20%;
+}
+.pokemon_characters > .col3 {
+  width: 60%;
+}
+.pokemon_characters > div > .character {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  height: 250px;
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.col2 > h4 {
+  font-size: 30px;
+  font-weight: 100;
+  color: black;
+}
+.pokemon_logo {
+  width: 50%;
+}
+.col2 > h6 {
+  font-size: 18px;
+  font-weight: 100;
+}
+.col3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 806px) {
+  .pokemon_of_the_year {
+    width: 100%;
+  }
+  .pokemon_of_the_year_contents {
+    width: 100%;
+  }
+  .pokemon_characters {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+  }
+  .pokemon_characters > .col1,
+  .pokemon_characters > .col2,
+  .pokemon_characters > .col3 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .pokemon_characters > div > .character {
+    width: 50%;
+    object-fit: contain;
+    border-radius: 50%;
+    height: 150px;
     margin: auto;
-}
-.pokemon_of_the_year_contents>h4{
-    font-size: 30px;
-    color: black;
+  }
+  .col1 {
     text-align: center;
+  }
+  .pokemon_logo {
+    width: 20%;
+  }
 }
 /* Pokemon of the year section ends here */
+
+/* Q and A section starts here */
+.pokemonQN_section {
+  width: 100%;
+  background-color: #4992ca;
+}
+.QN_contents {
+  width: 75%;
+  margin: auto;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.QN_contents > h2 {
+  font-size: 45px;
+  text-align: center;
+}
+.QN_contents > p {
+  text-align: start;
+  margin-top: 15px;
+}
+.QN_contents > p,
+ol > li {
+  font-weight: 600;
+}
+.order > li {
+  margin-top: 15px;
+}
+.unorder {
+  width: 75%;
+  margin: auto;
+}
+.unorder > li {
+  font-weight: 100;
+  margin-top: 15px;
+}
+
+/* Q and A section ends  here */
+
+/* Pokemon Battles Section starts here */
+.pokemon_battle_section {
+  width: 100%;
+}
+
+.battle_section_content {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.battle_section_content > h2 {
+  font-size: 45px;
+  color: black;
+  margin-top: 20px;
+}
+.battle_section_content > h4 {
+  color: black;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.chart_with_table {
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+}
+.chart {
+  width: 30%;
+}
+.chart > h4 {
+  font-size: 14px;
+  color: black;
+  text-align: start;
+  margin-top: 20px;
+  padding: 6px;
+}
+.chart > p {
+  text-align: start;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 6px;
+}
+.chart_table {
+  width: 70%;
+}
+.chart_table > table {
+  width: 100%;
+  border: 1px solid #8a8a8a;
+  color: #8a8a8a;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.chart_table > p {
+  color: black;
+}
+td,
+th {
+  border: 1px solid #8a8a8a;
+  padding: 10px;
+}
+.table_head {
+  color: black;
+}
+.booking_ticket_para {
+  color: #4992ca;
+  margin-top: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.book_now_button {
+  width: 200px;
+  height: 35px;
+  color: white;
+  background-color: #4992ca;
+  border: none;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .battle_section_content {
+    width: 100%;
+    padding: 3px;
+  }
+  .chart_with_table {
+    flex-direction: column;
+  }
+  .chart {
+    width: 100%;
+  }
+  .chart_table {
+    width: 100%;
+  }
+  td,
+  th {
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  td,
+  th {
+    padding: 0px;
+  }
+}
+/* Pokemon Battles Section ends here */
+
+/* Know more about pokemon Section starts here  */
+.pokemon_know_more_section {
+  width: 100%;
+  background-color: #424242;
+  color: white;
+}
+.know_more_contents {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.know_more_contents > h2 {
+  font-size: 45px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.know_more_contents > button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 180px;
+  height: 40px;
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .know_more_contents > h2 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+/* Know more about pokemon Section ends here  */
+
+/* Pokemon single card starts here */
+
+.pokemon_single_card {
+  width: 100%;
+}
+.single_card {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #7f8c8d;
+}
+.single_card > h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.pokemon_single_specific {
+  height: 310px;
+  width: 250px;
+  border-top: 15px solid #4992ca;
+  border-bottom: 1px solid #8a8a8a;
+  border-left: 1px solid #8a8a8a;
+  border-right: 1px solid #8a8a8a;
+  margin-bottom: 15px;
+}
+
+.specific_cartoon {
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid #7f8c8d;
+  background-color: rgb(240, 233, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.specific_cartoon_desc {
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
+.specific_cartoon > img {
+  object-fit: contain;
+}
+.specific_cartoon_title {
+  font-weight: 100;
+}
+.specific_cartoon_ability {
+  color: black;
+  margin-bottom: 4px;
+}
+
+/* Pokemon card ends here */
+
+/* Pokemon Trainers Section starts here */
+
+.pokemon_trainer_section {
+  width: 100%;
+  background-color: #4992ca;
+  color: white;
+}
+.trainer_content {
+  width: 75%;
+  margin: auto;
+  font-family: Avenir-Next, Roboto, sans-serif;
+}
+.trainer_content > h4 {
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.trainer_content_row1,
+.trainer_content_row2,
+.trainer_content_row3,
+.trainer_content_row4 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.trainer_content_col1 {
+  text-align: center;
+}
+.trainer_content_col1 > img {
+  border-radius: 50%;
+  object-fit: contain;
+  height: 200px;
+  width: 200px;
+}
+.trainer_pokemon_logo {
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+}
+.trainer_content_col3 {
+  width: 50%;
+}
+.trainer_content_col2 > h4 {
+  font-weight: 100;
+  font-size: 30px;
+}
+.trainer_content_col2 > h6 {
+  font-size: 18px;
+  font-weight: 100;
+}
+@media screen and (max-width: 1165px) {
+  .trainer_content_row1,
+  .trainer_content_row2,
+  .trainer_content_row3,
+  .trainer_content_row4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+/* Pokemon Trainers Section ends here */
+
+/* Cards Section starts here */
+.pokemon_cards_section {
+  width: 100%;
+}
+.cards_contaner {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.pokemon_cards_section_card {
+  width: 40%;
+  height: 440px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-top: 15px solid #4992ca;
+  border-left: 1px solid #7f8c8d;
+  border-right: 1px solid #7f8c8d;
+  border-bottom: 1px solid #7f8c8d;
+}
+.pokemon_cards_section > h2 {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 10px;
+}
+.upper_part {
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid #7f8c8d;
+  background-color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+}
+.upper_part > h4 {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+.upper_part > h6 {
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+.lower_part {
+  width: 100%;
+  height: 75%;
+  color: black;
+}
+.lower_part > p {
+  padding: 4px;
+}
+@media screen and (max-width: 1007px) {
+  .lower_part {
+    height: 85%;
+  }
+  .upper_part {
+    height: 15%;
+  }
+  .lower_part > p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 795px) {
+  .lower_part > p {
+    font-size: 12px;
+  }
+  .upper_part > h4 {
+    margin-left: unset;
+    margin-top: unset;
+    font-size: 18px;
+  }
+  .upper_part > h6 {
+    font-size: 12px;
+    margin-left: unset;
+    font-weight: 100;
+    margin-bottom: unset;
+  }
+}
+@media screen and (max-width: 563px) {
+  .cards_contaner {
+    flex-wrap: unset;
+    flex-direction: column;
+  }
+  .pokemon_cards_section_card {
+    width: 100%;
+    height: 300px;
+  }
+  .pokemon_cards_section > h2 {
+    font-size: 20px;
+  }
+}
+/*  Cards Section ends here  */
+
+/* Input Section starts here  */
+.pokemon_input_section {
+  width: 100%;
+  background-color: #424242;
+}
+.input_section_content {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+.input_section_content > h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.input_and_button {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.input_and_button > input {
+  outline: none;
+  height: 40px;
+  width: 63%;
+}
+.input_and_button > button {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  height: 40px;
+  width: 35%;
+}
+@media screen and (max-width: 425px) {
+  .input_section_content > h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+/* Input Section ends here */
+
+/* Games Section starts here */
+.pokemon_game_section {
+  width: 100%;
+}
+.game_section_contents {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.game_section_contents > h1 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.game_section_row {
+  width: 100%;
+  display: flex;
+}
+.game_section_column {
+  width: 33.3%;
+  color: black;
+}
+.game_section_column > p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.game_picture {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.game_see_more {
+  background-color: #4992ca;
+  color: white;
+  border: none;
+  width: 160px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .game_section_row {
+    flex-direction: column;
+  }
+  .game_section_column {
+    width: 100%;
+    color: black;
+  }
+}
+/* Games Section ends here */
+
+/* Designer sec starts here */
+.pokemon_designers {
+  width: 100%;
+  background-color: #4992ca;
+}
+.designers_content {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+.designers_content > h1 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.designers_row {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.designer_colms {
+  width: 33.3%;
+}
+.designer {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.designer_colms > h4 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.designer_colms > h6 {
+  font-weight: 100;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .designers_row {
+    flex-direction: column;
+  }
+  .designer_colms {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/* Designer sec ends here */
+
+/* logos contents start here */
+
+.pokemon_logos_section {
+  width: 100%;
+}
+.logos_content {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+.logos_content > p {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.logos_row {
+  width: 100%;
+  display: flex;
+}
+.logos_colss {
+  width: 33.3%;
+}
+.logos_image {
+  height: 100px;
+  width: 150px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .logos_row {
+    flex-direction: column;
+  }
+  .logos_colss {
+    width: 100%;
+  }
+}
+/* logos contents ends here */
+
+/* know more starts here */
+.know_section {
+  width: 100%;
+  background-color: #4992ca;
+  color: white;
+}
+.know_contents {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.know_contents > h1 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.know_contents > button {
+  background: transparent;
+  width: 160px;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  color: white;
+}
+/* know more ends here */
+
+/* footer starts here */
+
+.footer_section {
+  width: 100%;
+  background-color: rgb(1, 1, 14);
+  color: white;
+}
+.footer_content {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.footer_colm {
+  width: 25%;
+  text-align: center;
+}
+.foot_head {
+  color: #7f8c8d;
+}
+.social {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_colm > p {
+  padding: 5px;
+}
+@media screen and (max-width: 768px) {
+  .footer_content {
+    width: 75%;
+
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .footer_colm {
+    width: 100%;
+    text-align: center;
+  }
+  .footer_colm > p {
+    padding: 10px;
+  }
+}
+/* footer ends here */
