@@ -62,6 +62,18 @@ body {
   background-color: #de713b;
   color: white;
 }
+@media screen and (max-width: 320px){
+  .pokemon_header_section {
+    flex-direction: column;
+  }
+  .pokemon_header_left {
+    margin-top: 5px;
+  }
+  .header_last_part{
+    margin-bottom: 20px;
+  }
+
+}
 @media screen and (max-width: 768px) {
   .pokemon_header_section {
     flex-direction: column;
@@ -93,6 +105,18 @@ body {
     margin-bottom: 20px;
   }
   
+}
+@media screen and (max-width: 320px){
+  .pokemon_header_section {
+    flex-direction: column;
+  }
+  .pokemon_header_left {
+    margin-top: 5px;
+  }
+  .header_last_part{
+    margin-bottom: 20px;
+  }
+
 }
 /* Ends here */
 
@@ -168,6 +192,8 @@ body {
   padding-left: 5px;
   padding-right: 5px;
 }
+
+
 @media screen and (max-width: 768px) {
   .pokemon_main_section_content {
     align-items: center;
@@ -190,7 +216,23 @@ body {
     width: 200px;
   }
 } 
-
+@media screen and (max-width: 320px){
+  .pokemon_main_section_content > h1 {
+    font-size: 30px;
+  }
+  .pokemon_main_section_content > h3 {
+    font-size: 20px;
+  }
+  .pokemon_apply_button {
+    height: 30px;
+  }
+  .pokemon_register_button {
+    height: 30px;
+  }
+  .pokemon_learn_more_button {
+    width: 180px;
+  }
+}
 /* Welcome Pars Ends here  */
 
 /* Pocket Monsters Section Starts here */
@@ -266,6 +308,19 @@ body {
   }
 }
 
+@media screen and (max-width: 320px){
+  .pockemon_monsters_contents > h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .pokemon_monster_water > p,
+.pokemon_monster_fire > p,
+.pokemon_monster_grass > p {
+  line-height: 20px;
+  margin-top: 15px;
+  
+}
+}
 /* Pocket Monsters Section Ends here */
 
 /* Statistics Section starts here */
@@ -330,6 +385,20 @@ body {
   }
 }
 
+@media screen and (max-width: 320px){
+  .pokemon_statistics_content > h2 {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  .card > h4 {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .card > p {
+    margin-top: 20px;
+  }
+}
 /* Statistics Section ends  here */
 
 /* Pokemon of the year section starts here */
@@ -422,6 +491,12 @@ body {
   }
   .pokemon_logo {
     width: 20%;
+  }
+}
+@media screen and (max-width: 320px){
+  .pokemon_of_the_year_contents > h4 {
+    font-size: 25px;
+    padding-top: 10px;
   }
 }
 /* Pokemon of the year section ends here */
@@ -561,14 +636,24 @@ th {
   }
   td,
   th {
-    padding: 3px;
+    padding: 0px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  td,
-  th {
-    padding: 0px;
+@media screen and (max-width: 320px){
+  .chart > p {
+   
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    line-height: 20px;
+  }
+  .battle_section_content > h4 {
+    
+    margin-top: 5px;
+  }
+  .chart_with_table{
+    margin-top: 20px;
   }
 }
 /* Pokemon Battles Section ends here */
@@ -736,6 +821,35 @@ th {
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 320px) {
+  .trainer_content {
+    width: 100%;
+    margin: unset;
+   
+  }
+  .trainer_content > h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+  }
+  .trainer_content_col2 > h4 {
+  
+    font-size: 15px;
+    
+    margin-bottom: 5px;
+  }
+  .trainer_content_col2 > h6 {
+    font-size: 15px;
+    
+  }
+  .trainer_content_col1 > img {
+    border-radius: 50%;
+    object-fit: contain;
+    height: 150px;
+    width: 150px;
+  }
+}
 /* Pokemon Trainers Section ends here */
 
 /* Cards Section starts here */
@@ -834,6 +948,16 @@ th {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 320px){
+  .lower_part > p {
+    font-size: 9px;
+  }
+  .pokemon_cards_section_card {
+   
+    height:270px;
+   
+  }
+}
 /*  Cards Section ends here  */
 
 /* Input Section starts here  */
@@ -878,6 +1002,18 @@ th {
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 320px){
+  .input_and_button > input {
+    
+    height: 30px;
+   
+  }
+  .input_and_button > button {
+   
+    height: 30px;
+   
   }
 }
 /* Input Section ends here */
@@ -927,6 +1063,16 @@ th {
   .game_section_column {
     width: 100%;
     color: black;
+  }
+}
+@media screen and (max-width: 320px){
+  .game_section_contents > h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .game_section_column > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 /* Games Section ends here */
@@ -981,6 +1127,13 @@ th {
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 320px){
+  .designers_content > h1 {
+   
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 /* Designer sec ends here */
 
 /* logos contents start here */
@@ -1021,6 +1174,13 @@ th {
     width: 100%;
   }
 }
+@media screen and (max-width: 320px){
+  .logos_image {
+    height: 70px;
+    width: 120px;
+    object-fit: contain;
+  }
+}
 /* logos contents ends here */
 
 /* know more starts here */
@@ -1045,6 +1205,19 @@ th {
   margin-bottom: 20px;
   border: 2px solid #fff;
   color: white;
+}
+@media screen and (max-width: 320px){
+  .know_contents > button {
+   
+    width: 130px;
+    height: 30px;
+    margin-bottom: 10px;
+    
+  }
+  .know_contents > h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 /* know more ends here */
 
@@ -1097,5 +1270,13 @@ th {
     text-align: center;
   }
  
+}
+@media screen and (max-width: 320px){
+  .footer_content {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
 }
 /* footer ends here */
